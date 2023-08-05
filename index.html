@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header__logo">
+                <img src="./imgs/logo.svg" alt="">
+            </div>
+            <div class="header__controls">
+                <button class="header__help btn">Помощь с расчетом</button>
+                <button class="header__goToSite opBtn">Перейти на сайт</button>
+            </div>
+            <div class="header__contacts">
+                <div class="header__phone">+7 (000) 000-00-00</div>
+                <div class="header__email">info@k-flex-kazan.ru</div>
+            </div>
+        </header>
+        <div class="header__bottom">
+            <h2>Расчет аксессуаров для трубок K-FLEX</h2>
+            <button class="opBtn returnBtn">Вернуться</button>
+        </div>
+    <main class="main">
+
+    
+    <div class="leftBlock">
+
+
+    <section class="calc">
+        <h3>Укажите параметры для расчета</h3>
+        <div class="calcHeader">
+            <div class="calcHeader__row">
+
+
+            </div>
+            <div class="calcHeader__row">
+                <input type="text" class="calcHeader__dn" placeholder="DN трубы">
+                <input type="text" class="calcHeader__thickness" placeholder="Толщина изоляции в мм">
+                <input type="text" class="calcHeader__widthRoll" placeholder="Ширина рулона" disabled value="1">
+                <input  required type="text" placeholder="Длинна трубы, в метрах" class="calcHeader__len">
+                <button class="calcHeader__add btn">Рассчитать</button>
+            </div>
+        </div>
+
+        <div class="calcTable">
+                <table class="itemsTable__table" cellspacing="0" cellpadding="5" bordercolor="#ccc" border="1">
+                <thead>
+                <tr class="itemsTable">
+                    <th>DN трубы&nbsp;(мм)</th>
+                    <th>Толщина изоляции&nbsp;(мм)</th>
+                    <th>Длинна трубы&nbsp;(м/п)</th>
+                    <th>Кол-во Клея&nbsp;(л)</th>
+                    <th>Кол-во Очистителя&nbsp;(л)</th>
+                    <th>Лента продольная&nbsp;(м)</th>
+                    <th>Лента поперечная&nbsp;(м)</th>
+                    <th>Руллоный материал&nbsp;(м<sup>2</sup>)</th>
+                    <th>Покрывной материал&nbsp;(м<sup>2</sup>)</th>
+                    <th>     </th>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+                </table>
+        </div>
+        <h3>Итого вам понадобиться:</h3>
+        <div class="calcResults">
+            
+            <div class="calcResults__item amountGlue">
+                <div class="calcResults__caption">
+                    Количество клея
+                </div>
+                <div class="calcResults__res">
+                    <span class="calcResults__value">0</span>
+                    <span class="calcResults__unit">литров</span>
+                </div>
+            </div>
+            <div class="calcResults__item amountCleaner">
+                <div class="calcResults__caption">
+                    Количество очистителя
+                </div>
+                <div class="calcResults__res">
+                    <span class="calcResults__value">0</span>
+                    <span class="calcResults__unit">литров</span>
+                </div>
+            </div>
+            <div class="calcResults__item amountTapeLongitudinal">
+                <div class="calcResults__caption">
+                    Количество ленты для продольных&nbsp;швов
+                </div>
+                <div class="calcResults__res">
+                    <span class="calcResults__value">0</span>
+                    <span class="calcResults__unit">метров</span>
+                </div>
+            </div>
+            <div class="calcResults__item amountTapeCross">
+                <div class="calcResults__caption">
+                    Количество ленты для поперечных&nbsp;швов
+                </div>
+                <div class="calcResults__res">
+                    <span class="calcResults__value">0</span>
+                    <span class="calcResults__unit">метров</span>
+                </div>
+            </div>
+            <div class="calcResults__item amountRollMaterial">
+                <div class="calcResults__caption">
+                    Количество рулонного материала
+                </div>
+                <div class="calcResults__res">
+                    <span class="calcResults__value">0</span>
+                    <span class="calcResults__unit">м<sup>2</sup></span>
+                </div>
+            </div>
+            <div class="calcResults__item amountCoverMaterial">
+                <div class="calcResults__caption">
+                    Количество покрытия
+                </div>
+                <div class="calcResults__res">
+                    <span class="calcResults__value">0</span>
+                    <span class="calcResults__unit">м<sup>2</sup></span>
+                </div>
+            </div>
+        </div>
+            <button class="calcGeneratePdf btn">
+                Сохранить Pdf
+            </button>
+
+    </section>
+    <h3 class="footer__label">
+        Если у вас возникли проблемы с расчетом или нужна помощь
+        позвоните нам +7 000 000 000
+    </h3>
+</div>
+    <aside class="cheaperForm">
+        <div class="cheaperForm__inner">
+            <h3>Нашли дешевле?
+                Сделаем&nbsp;еще более выгодно</h3>
+                <p>Заполните форму</p>
+                <input placeholder="Представьтесь пожалуйста" class="cheaperForm__name" type="text">
+                <input placeholder="Укажите ваш номер телефона" class="cheaperForm__phone" type="text">
+            
+            <p>Прикрепите счет конкурента</p>
+                <input type="file" name="" id="">
+            <p class="note">Нажимая на кнопку отправить вы соглашаетесь с условиями политики конфиденциальности и обработки персональных данных</p>
+            <button class="btn cheaperForm__btn">Снизить цену</button>
+        </div>
+    </aside>
+</main>
+    <img class="pdfLogo hide" src="./imgs/logoPdf.png" alt="" srcset="">
+    <script src="font.js"></script>
+    <script src="jspdf.umd.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
