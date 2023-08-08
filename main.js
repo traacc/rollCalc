@@ -21,7 +21,7 @@ let itemsPosition = [];
 
 const { jsPDF } = window.jspdf;
 
-addBtn.addEventListener('click',()=>{
+function addTableItem(){
     tableId++;
     
     let dnv = Number(dn.value);
@@ -70,8 +70,31 @@ addBtn.addEventListener('click',()=>{
         updateResults();
     });
     updateResults();
+
+    dn.value = "";
+    thickness.value = "";
+    len.value = "";
+}
+
+addBtn.addEventListener('click',()=>{
+    addTableItem();
 });
 
+dn.addEventListener("keyup",(e)=>{
+    if(e.keyCode===13){
+        addTableItem();
+    }
+});
+thickness.addEventListener("keyup",(e)=>{
+    if(e.keyCode===13){
+        addTableItem();
+    }
+});
+rollWidth.addEventListener("keyup",(e)=>{
+    if(e.keyCode===13){
+        addTableItem();
+    }
+});
 
 function generateItems(itemObj, placeholder){
     let html = `<option value="" disabled selected>${placeholder}</option>`;
@@ -106,7 +129,7 @@ function calcCirLen (dn, thickness) {
 }
 
 function calcAmountTapeLongitudinal (dn, thickness, len, rw) {
-    return Number(calcCirLen(dn, thickness)*(len-1)/rw);
+    return Number(calcCirLen(dn, thickness)*(len/rw));
 }
 
 function calcAmountTapeCross (dn, thickness, len) {

@@ -146,7 +146,14 @@ h1, h2, h3, h4, h5, h6 {
 
     font-family: Futura PT, Arial, Helvetica, sans-serif;
 }
-
+.inputBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.calcHeader__row .inputBlock {
+    width: 195px;
+}
 .calcHeader__row select:required:invalid {
     color: #9e9e9e;
 }

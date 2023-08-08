@@ -40,11 +40,28 @@
 
             </div>
             <div class="calcHeader__row">
-                <input type="text" class="calcHeader__dn" placeholder="DN трубы">
-                <input type="text" class="calcHeader__thickness" placeholder="Толщина изоляции в мм">
-                <input type="text" class="calcHeader__widthRoll" placeholder="Ширина рулона" disabled value="1">
-                <input  required type="text" placeholder="Длинна трубы, в метрах" class="calcHeader__len">
-                <button class="calcHeader__add btn">Рассчитать</button>
+                <div class="inputBlock">
+                    <label for="calcHeader__dn">DN трубы</label>
+                    <input required type="text" id="calcHeader__dn"  class="calcHeader__dn" placeholder="DN трубы">
+                </div>
+                <div class="inputBlock">
+                    <label for="calcHeader__thickness">Толщина изоляции в мм</label>
+                    <input required type="text" id="calcHeader__thickness" class="calcHeader__thickness" placeholder="Толщина изоляции в мм">
+                </div>
+                <div class="inputBlock">
+                    <label for="calcHeader__widthRoll">Ширина рулона</label>
+                    <input type="text" id="calcHeader__widthRoll" class="calcHeader__widthRoll" placeholder="Ширина рулона" disabled value="1">
+                </div>
+                <div class="inputBlock">
+                    <label for="calcHeader__len">Длинна трубы, в метрах</label>
+                    <input  required type="text" id="calcHeader__len" placeholder="Длинна трубы, в метрах" class="calcHeader__len">
+                </div>
+                
+                <div class="inputBlock">
+                    
+                    <button class="calcHeader__add btn">Рассчитать</button>
+                </div>
+                
             </div>
         </div>
 
