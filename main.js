@@ -90,7 +90,7 @@ thickness.addEventListener("keyup",(e)=>{
         addTableItem();
     }
 });
-rollWidth.addEventListener("keyup",(e)=>{
+len.addEventListener("keyup",(e)=>{
     if(e.keyCode===13){
         addTableItem();
     }
